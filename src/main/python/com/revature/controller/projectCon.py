@@ -25,6 +25,6 @@ def controller():
             elif uinput == '3':
                 print(deposit())
             elif uinput == '4':
-                transactions()
+                getTransactions()
             elif uinput == '5':
                 curr = logOut()

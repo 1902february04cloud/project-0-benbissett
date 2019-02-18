@@ -28,6 +28,7 @@ def writeToTransaction(number, name, amount):
     else:
         with open('pio/transactions.txt', 'a+') as trans:
             trans.write('{} deposited ${} at {} \n'.format(str(name), str(amount), datetime.now()))
+
 def transactions(name):
     return os.system('grep {} "pio/transactions.txt"'.format(name))
 

@@ -10,8 +10,8 @@ import yaml
 
 userName = ""
 users = getUsers()
-if os.path.exists('logging.yaml'):
-        with open('logging.yaml','r') as f:
+if os.path.exists('service/logging.yaml'):
+        with open('service/logging.yaml','r') as f:
             config = yaml.safe_load(f.read())
         #Enable our loaded configuration
         logging.config.dictConfig(config)
@@ -86,19 +86,19 @@ def withdraw():
     balance = float(getBalance())
     try:
         if balance <= 0 or amount > balance:
-            raise notEnoughMoneyException()
-    except(notEnoughMoneyException()):
+            raise(notEnoughMoneyException)
+        else:
+            balance -= amount
+            balance = '{0:.2f}'.format(round(balance,2))
+            amount = '{0:.2f}'.format(round(amount,2))
+            value = users.get(userName)
+            users[userName] = [value[0], balance]
+            writeToTransaction(1, userName, amount)
+            logging.debug('Exiting withdraw function')
+            return 'Your have withdrawn ${} leaving you with ${}'.format(amount, balance)
+    except(notEnoughMoneyException):
         logging.error('Not enough money in account for withdraw')
         print('Not enough money in account to complete transaction.')
-    else:
-        balance -= amount
-        balance = '{0:.2f}'.format(round(balance,2))
-        amount = '{0:.2f}'.format(round(amount,2))
-        value = users.get(userName)
-        users[userName] = [value[0], balance]
-        writeToTransaction(1, userName, amount)
-        logging.debug('Exiting withdraw function')
-        return 'Your have withdrawn ${} leaving you with ${}'.format(amount, balance)
 
 def deposit():
     logging.debug('Entering deposit function')
@@ -117,10 +117,10 @@ def deposit():
     logging.debug('Exiting deposit function')
     return 'You have deposited ${} leaving you with ${}'.format(amount, balance)
 
-def transactions():
+def getTransactions():
     logging.debug('Entered transactions method')
     logging.debug('Excited transactions method')
-    return transactions(users[userIndex][0])
+    return transactions(userName)
 
 def logOut():
     return False
