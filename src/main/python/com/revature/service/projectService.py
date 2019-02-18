@@ -98,7 +98,7 @@ def withdraw():
             return 'Your have withdrawn ${} leaving you with ${}'.format(amount, balance)
     except(notEnoughMoneyException):
         logging.error('Not enough money in account for withdraw')
-        print('Not enough money in account to complete transaction.')
+        return 'Not enough money in account to complete transaction.'
 
 def deposit():
     logging.debug('Entering deposit function')
