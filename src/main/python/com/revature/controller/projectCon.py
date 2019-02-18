@@ -19,7 +19,7 @@ def controller():
         while curr and running:
             uinput = input('Enter 1 to check balance, 2 to withdraw, 3 to deposit, 4 to check history, 5 to log out: ')
             if uinput == '1':
-                print(getBalance())
+                print(checkBalance())
             elif uinput == '2':
                 print(withdraw())
             elif uinput == '3':

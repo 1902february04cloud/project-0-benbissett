@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\python",
+    "\\src\\main\\python\\com",
+    "\\src\\main\\python\\com\\revature",
+    "\\src\\main\\python\\com\\revature\\error",
+    "\\src\\main\\python\\com\\revature\\service",
+    "\\src\\main\\resources",
+    "\\src\\test",
+    "\\src\\test\\python",
+    "\\src\\test\\python\\com",
+    "\\src\\test\\python\\com\\revature"
+  ],
+  "SelectedNode": "\\src\\main\\python\\com\\revature\\service\\projectService.py",
+  "PreviewInSolutionExplorer": false
+}

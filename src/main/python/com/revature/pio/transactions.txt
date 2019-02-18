@@ -1,0 +1,17 @@
+ben.bissett checked balance at 2019-02-18 11:17:49.430810 
+ben.bissett deposited $100.0 at 2019-02-18 11:17:52.150823 
+ben.bissett checked balance at 2019-02-18 11:17:53.983987 
+isaac checked balance at 2019-02-18 11:18:26.489329 
+isaac deposited $20.0 at 2019-02-18 11:18:29.109625 
+ben.bissett checked balance at 2019-02-18 11:18:37.308332 
+ben.bissett checked balance at 2019-02-18 11:22:36.796271 
+ben.bissett withdrew $50.0 at 2019-02-18 11:22:39.711303 
+ben.bissett checked balance at 2019-02-18 11:22:46.489936 
+isaac checked balance at 2019-02-18 11:23:01.063053 
+isaac withdrew $10.55 at 2019-02-18 11:23:06.334346 
+isaac checked balance at 2019-02-18 11:23:08.781490 
+ben.bissett checked balance at 2019-02-18 11:24:32.093556 
+ben.bissett withdrew $25.96 at 2019-02-18 11:24:37.373223 
+ben.bissett withdrew $2.00 at 2019-02-18 11:24:46.618866 
+ben.bissett checked balance at 2019-02-18 11:44:19.379632 
+ben.bissett checked balance at 2019-02-18 11:59:19.377363 

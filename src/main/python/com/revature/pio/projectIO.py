@@ -1,14 +1,22 @@
 import sys
 import os
 from datetime import datetime
+sys.path.append('../')
+from error.error import *
 
-#Try users = dict(user) instead of for line loop
 def getUsers():
-    users = []
-    with open('pio/users.txt', 'r') as user:
-        for line in user:
-            users.append(line.split())
-    return users
+    users = dict()
+    try:
+        if os.path.exists('pio/users.txt'):
+            with open('pio/users.txt', 'r') as user:
+                data = user.read()
+                users = dict(eval(data))
+        else:
+            raise(noUsersException)
+    except(noUsersException):
+        print('No users registered so please create an account')
+    finally:
+        return users
 
 def writeToTransaction(number, name, amount):
     if number == 0:
@@ -23,10 +31,9 @@ def writeToTransaction(number, name, amount):
 def transactions(name):
     return os.system('grep {} "pio/transactions.txt"'.format(name))
 
-def save(list):
+def save(dic):
     with open('pio/users.txt', 'w') as user:
-        for line in list:
-            user.write('{} {} {} \n'.format(line[0], line[1], line[2]))
+        user.write(str(dic))
     return True
 
 
