@@ -15,3 +15,11 @@ ben.bissett withdrew $25.96 at 2019-02-18 11:24:37.373223
 ben.bissett withdrew $2.00 at 2019-02-18 11:24:46.618866 
 ben.bissett checked balance at 2019-02-18 11:44:19.379632 
 ben.bissett checked balance at 2019-02-18 11:59:19.377363 
+ben.bissett checked balance at 2019-02-19 16:37:47.910984 
+ben.bissett checked balance at 2019-02-19 16:38:28.078176 
+ben.bissett deposited $100.00 at 2019-02-19 16:38:31.078079 
+ben.bissett withdrew $20.00 at 2019-02-19 16:38:33.984235 
+paul checked balance at 2019-02-20 07:31:46.966510 
+paul deposited $100.00 at 2019-02-20 07:31:51.245755 
+paul checked balance at 2019-02-20 07:31:54.036126 
+ben.bissett checked balance at 2019-02-20 07:32:11.516874 

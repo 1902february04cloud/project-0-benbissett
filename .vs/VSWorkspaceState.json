@@ -6,14 +6,11 @@
     "\\src\\main\\python",
     "\\src\\main\\python\\com",
     "\\src\\main\\python\\com\\revature",
-    "\\src\\main\\python\\com\\revature\\error",
+    "\\src\\main\\python\\com\\revature\\controller",
+    "\\src\\main\\python\\com\\revature\\pio",
     "\\src\\main\\python\\com\\revature\\service",
-    "\\src\\main\\resources",
-    "\\src\\test",
-    "\\src\\test\\python",
-    "\\src\\test\\python\\com",
-    "\\src\\test\\python\\com\\revature"
+    "\\src\\main\\resources"
   ],
-  "SelectedNode": "\\src\\main\\python\\com\\revature\\service\\projectService.py",
+  "SelectedNode": "\\src\\main\\python\\com\\revature\\test.py",
   "PreviewInSolutionExplorer": false
 }

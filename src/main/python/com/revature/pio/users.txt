@@ -1,1 +1,1 @@
-{'ben.bissett': ['5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '22.04'], 'isaac': ['5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '9.45']}
+{'ben.bissett': ['5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '102.04'], 'isaac': ['5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '9.45'], 'paul': ['5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '100.00']}
