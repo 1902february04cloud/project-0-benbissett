@@ -24,7 +24,7 @@ logger = logging.getLogger('project-0')
 
 #register users by asking for username and password and appending to users dict
 def register():
-    #logger.debug('Entring register function')
+    logger.debug('Entring register function')
     name = input('Please enter your username: ')
     passW = getpass('Please enter your password: ')
     try:
@@ -40,21 +40,21 @@ def register():
     #handle username being taken and print a message to stdout and log error
     except(duplicateNameException):
         print('Username is already taken please use another')
-        #logger.error('Username already taken')
-    #finally:
-        #logger.debug('Exiting register function')
+        logger.error('Username already taken')
+    finally:
+        logger.debug('Exiting register function')
 
 #check if username and password is a valid user in users.txt and log them in if they are
 def logIn():
     userName = ""
-    #logger.debug('Entering login function')
+    logger.debug('Entering login function')
     try:
         name = input('Please enter your username: ')
         value = users.get(name)
         passW = getpass('Please enter your password: ')
         #raise and error if username not in user dict
         if not value:
-            #logger.error('Invalid username entered')
+            logger.error('Invalid username entered')
             raise(logInException)
         hasher = hashlib.sha1()
         hasher.update((passW).encode('utf-8'))
@@ -65,14 +65,14 @@ def logIn():
             return userName
         #raise and error if password hashes don't match
         else:
-            #logger.error('Invalid password entered for {}'.format(name))
+            logger.error('Invalid password entered for {}'.format(name))
             raise(logInException)
     #handle if username or password were incorrect
     except(logInException):
         print('Username or password were incorrect')
         return userName
-    #finally:
-        #logger.debug('Exiting login function')
+    finally:
+        logger.debug('Exiting login function')
 
 #returns the balance of the user with userName
 def getBalance(userName):
@@ -81,21 +81,21 @@ def getBalance(userName):
 
 #prints out a message telling user how much money is in the account and logs a transaction
 def checkBalance(userName):
-    #logging.debug('Entering checkBalance function')
+    logger.debug('Entering checkBalance function')
     writeToTransaction(0, userName, 0)
     balance = getBalance(userName)
-    #logging.debug('Exiting checkBalance function')
+    logger.debug('Exiting checkBalance function')
     return 'Your have ${} remaining in your account'.format(balance)
 
 #allows user to withdraw money from account as long as amount entered is less than the money in the account
 #records a withdraw transaction in the users name
 def withdraw(userName):
-    #logging.debug('Entering withdraw function')
+    logger.debug('Entering withdraw function')
     #makes sure the amount to be withdrawn is a valid number and not a string
     try:
         amount = float(input('Enter the amount you would like to withdraw: '))
     except(ValueError):
-        #logging.error('Entered a string instead of a valid numerical number')
+        logger.error('Entered a string instead of a valid numerical number')
         return 'Unable to complete transaction please enter a valid number'
         
     balance = float(getBalance(userName))
@@ -111,21 +111,21 @@ def withdraw(userName):
             value = users.get(userName)
             users[userName] = [value[0], balance]
             writeToTransaction(1, userName, amount)
-            #logging.debug('Exiting withdraw function')
+            logger.debug('Exiting withdraw function')
             return 'Your have withdrawn ${} leaving you with ${}'.format(amount, balance)
     #handles not enough money and prints out a message
     except(notEnoughMoneyException):
-        #logging.error('Not enough money in account for withdraw')
+        logger.error('Not enough money in account for withdraw')
         return 'Not enough money in account to complete transaction.'
 
 #allows person logged in to deposit money into their account and records a transaction in users name
 def deposit(userName):
-    #logging.debug('Entering deposit function')
+    logger.debug('Entering deposit function')
     #checks if the input is a valid number otherwise handles the error
     try:
         amount = float(input('Enter the amount you would like to deposit: '))
     except(ValueError):
-        #logging.error('Entered a string instead of a valid numerical value')
+        logger.error('Entered a string instead of a valid numerical value')
         return 'Unable to complete transaction please enter a valid number'
     balance = float(getBalance(userName))
     balance += amount
@@ -135,13 +135,13 @@ def deposit(userName):
     value = users.get(userName)
     users[userName] = [value[0], balance]
     writeToTransaction(2, userName, amount)
-    #logging.debug('Exiting deposit function')
+    logger.debug('Exiting deposit function')
     return 'You have deposited ${} leaving you with ${}'.format(amount, balance)
 
 #calles transactions in projectIO to get all the transactions that have been done by the logged in user
 def getTransactions(userName):
-    #logging.debug('Entered transactions method')
-    #logging.debug('Excited transactions method')
+    logger.debug('Entered transactions method')
+    logger.debug('Excited transactions method')
     return transactions(userName)
 
 #log out and allow more people to logIn or register
